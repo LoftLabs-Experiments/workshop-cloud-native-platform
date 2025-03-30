@@ -35,6 +35,72 @@ sudo apt-get install gettext
 # On Windows using scoop
 scoop install gettext
 ```
+### Helm
+
+[Helm](https://helm.sh/) is a package manager for Kubernetes used to install Crossplane and monitoring tools.
+
+```bash
+# On macOS
+brew install helm
+
+# On Linux
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+chmod 700 get_helm.sh
+./get_helm.sh
+
+# On Windows
+choco install kubernetes-helm
+```
+
+### Crossplane CLI
+
+[Crossplane CLI](https://docs.crossplane.io/latest/cli/) is used for Crossplane package management and trace commands.
+
+```bash
+# On macOS
+brew install crossplane/tap/crossplane
+
+# On Linux
+curl -sL "https://raw.githubusercontent.com/crossplane/crossplane/master/install.sh" | sh
+sudo mv crossplane /usr/local/bin
+
+# On Windows
+# Download from https://github.com/crossplane/crossplane/releases
+# Add the directory to your PATH
+```
+
+### ArgoCD CLI
+
+The ArgoCD CLI is used to interact with the ArgoCD server for managing applications.
+
+```bash
+# On macOS
+brew install argocd
+
+# On Linux
+curl -sSL -o argocd-linux-amd64 https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64
+sudo install -m 555 argocd-linux-amd64 /usr/local/bin/argocd
+rm argocd-linux-amd64
+
+# On Windows
+# Download from https://github.com/argoproj/argo-cd/releases/latest
+# Add the directory to your PATH
+```
+
+### watch command
+
+The `watch` command is used to continuously monitor resources.
+
+```bash
+# On macOS
+brew install watch
+
+# On Linux
+sudo apt-get install procps
+
+# On Windows using scoop
+scoop install watch
+```
 
 ### KIND (Kubernetes IN Docker)
 
