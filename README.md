@@ -107,6 +107,7 @@ base64 ~/crossplane-azure-provider-key.json | tr -d "\n" > ~/base64encoded_azure
 ```
 
 ## Getting Started
+Clone the repository with source code: `git clone https://github.com/Piotr1215/infra-platform-arch && cd ./infra-platform-arch`. From here you can execute the following commands. 
 
 ### Step 1: Clean up any existing Terraform state
 
