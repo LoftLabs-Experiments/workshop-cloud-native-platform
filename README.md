@@ -1,4 +1,4 @@
-# Infrastructure Platform Architecture Demo
+# How to build cloud native platforms with vcluster
 
 This repository demonstrates a platform architecture using Crossplane, KIND clusters, and vCluster for multi-tenancy. This README will guide you through setting up the environment and running the demos.
 
