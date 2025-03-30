@@ -21,6 +21,21 @@ curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash
 scoop install just
 ```
 
+### envsubst (gettext)
+
+`envsubst` is used for environment variable substitution in templates and is part of the gettext package.
+
+```bash
+# On macOS
+brew install gettext
+
+# On Linux
+sudo apt-get install gettext
+
+# On Windows using scoop
+scoop install gettext
+```
+
 ### KIND (Kubernetes IN Docker)
 
 [KIND](https://kind.sigs.k8s.io/) is used to run Kubernetes clusters locally using Docker containers as nodes.
@@ -107,7 +122,23 @@ base64 ~/crossplane-azure-provider-key.json | tr -d "\n" > ~/base64encoded_azure
 ```
 
 ## Getting Started
-Clone the repository with source code: `git clone https://github.com/Piotr1215/infra-platform-arch && cd ./infra-platform-arch`. From here you can execute the following commands. 
+
+Clone the repository with source code: `git clone https://github.com/Piotr1215/infra-platform-arch && cd ./infra-platform-arch`. 
+Place the secret in the `secrets` folder in the repo:
+
+```yaml
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: azure-creds
+  namespace: crossplane-system
+type: Opaque
+data:
+  creds: $base64encoded_azure_creds
+```
+
+From here you can execute the following commands. 
 
 ### Step 1: Clean up any existing Terraform state
 
