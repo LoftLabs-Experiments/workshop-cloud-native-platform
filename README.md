@@ -1,6 +1,6 @@
-# How to build cloud native platforms with vcluster
+# How to build cloud native platforms with vCluster
 
-This repository demonstrates a platform architecture using Crossplane, KIND clusters, and vCluster for multi-tenancy. This README will guide you through setting up the environment and running the demos.
+This repository demonstrates an infrastructure platform architecture using Crossplane, KIND clusters, and vCluster for multi-tenancy. This README will guide you through setting up the environment and running the demos.
 
 ## Prerequisites
 
@@ -66,24 +66,6 @@ sudo mv crossplane /usr/local/bin
 
 # On Windows
 # Download from https://github.com/crossplane/crossplane/releases
-# Add the directory to your PATH
-```
-
-### ArgoCD CLI
-
-The ArgoCD CLI is used to interact with the ArgoCD server for managing applications.
-
-```bash
-# On macOS
-brew install argocd
-
-# On Linux
-curl -sSL -o argocd-linux-amd64 https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64
-sudo install -m 555 argocd-linux-amd64 /usr/local/bin/argocd
-rm argocd-linux-amd64
-
-# On Windows
-# Download from https://github.com/argoproj/argo-cd/releases/latest
 # Add the directory to your PATH
 ```
 
